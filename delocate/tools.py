@@ -344,7 +344,7 @@ def get_environment_variable_paths():
     # We'll search the extra library paths in a specific order:
     # DYLD_LIBRARY_PATH and then DYLD_FALLBACK_LIBRARY_PATH
     env_var_paths = []
-    extra_paths = ['DYLD_LIBRARY_PATH', 'DYLD_FALLBACK_LIBRARY_PATH']
+    extra_paths = ['DYLD_LIBRARY_PATH', 'DYLD_FALLBACK_LIBRARY_PATH', 'DELOCATE_LIBRARY_PATH']
     for pathname in extra_paths:
         path_contents = os.environ.get(pathname)
         if path_contents is not None:
